@@ -1,3 +1,14 @@
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		if (_p0.ctor === 'Input') {
+			return _elm_lang$core$Native_Utils.update(
+				model,
+				{name: _p0._0});
+		} else {
+			return model;
+		}
+	});
 var _user$project$Main$initModel = {
 	players: {ctor: '[]'},
 	name: '',
@@ -16,3 +27,18 @@ var _user$project$Main$Play = F4(
 	function (a, b, c, d) {
 		return {id: a, playerId: b, name: c, points: d};
 	});
+var _user$project$Main$DeletePlay = function (a) {
+	return {ctor: 'DeletePlay', _0: a};
+};
+var _user$project$Main$Cancel = {ctor: 'Cancel'};
+var _user$project$Main$Save = {ctor: 'Save'};
+var _user$project$Main$Input = function (a) {
+	return {ctor: 'Input', _0: a};
+};
+var _user$project$Main$Score = F2(
+	function (a, b) {
+		return {ctor: 'Score', _0: a, _1: b};
+	});
+var _user$project$Main$Edit = function (a) {
+	return {ctor: 'Edit', _0: a};
+};

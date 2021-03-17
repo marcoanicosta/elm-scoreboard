@@ -1,6 +1,8 @@
 module Main exposing (..)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 
 
 
@@ -37,3 +39,26 @@ initModel =
     , playerId = Nothing
     , plays = []
     }
+
+
+
+-- update
+
+
+type Msg
+    = Edit Player
+    | Score Player Int
+    | Input String
+    | Save
+    | Cancel
+    | DeletePlay Play
+
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        Input name ->
+            { model | name = name }
+
+        _ ->
+            model
